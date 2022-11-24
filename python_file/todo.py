@@ -7,21 +7,21 @@ class todo:
         self.root.geometry('650x410+300+150')
         
         self.label = Label(self.root, text='to do list',
-            font='ariel, 25 bold', width=10,bd=5,bg='red', fg='black')
+            font='ariel, 25 bold', width=10,bd=5,bg='#c8c8c8', fg='black')
         self.label.pack(side='top', fill=BOTH)
         
         self.label2 = Label(self.root, text='Add text',
-            font='ariel, 18 bold', width=10,bd=5,bg='red', fg='black')
+            font='ariel, 18 bold', width=10,bd=5,bg='#a9f5b4', fg='black')
         self.label2.place(x=40, y=54)
         
         self.label3 = Label(self.root, text='Text',
-            font='ariel, 18 bold', width=10,bd=5,bg='red', fg='black')
+            font='ariel, 18 bold', width=10,bd=5,bg='#a9f5b4', fg='black')
         self.label3.place(x=320, y=54)
         
         self.main_text = Listbox(self.root, height=9, bd=5, width=23, font='ariel, 20 italic bold')
         self.main_text.place(x=280, y=100)
         
-        self.text = Text(self.root, bd=5, height=2, width=30, font='ariel, 10 bold')
+        self.text = Text(self.root, bd=5, height=2, width=30, font='sarif, 10 bold')
         self.text.place(x=20, y=120)
 
         def add():
