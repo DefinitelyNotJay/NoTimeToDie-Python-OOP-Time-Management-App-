@@ -21,7 +21,7 @@ class todo:
         self.main_text = Listbox(self.root, height=9, bd=5, width=23, font='ariel, 20 italic bold')
         self.main_text.place(x=280, y=100)
         
-        self.text = Text(self.root, bd=5, height=2, width=40, font='ariel, 10 bold')
+        self.text = Text(self.root, bd=5, height=2, width=30, font='ariel, 10 bold')
         self.text.place(x=20, y=120)
 
         def add():
@@ -51,12 +51,12 @@ class todo:
                 ready = i.split()
                 self.main_text.insert(END, ready)
                 file.close()
-        self.button = Button(self.root, text="Add", font='sarif , 20 bold italic',
-                    width=10,bd=5, bg='green', fg='black', comand=add)
+        self.button = Button(self.root, text="Add", font='sarif, 20 bold italic',
+                    width=10,bd=5, bg='green', fg='black', command=add)
         self.button.place(x=30, y=180)
         self.button2 = Button(self.root, text='Delete', font='sarif, 20 bold italic',
                     width=10,bd=5, bg='red', fg='black', command=delete)
-        self.button2.place(x=30, y=200)
+        self.button2.place(x=30, y=280)
             
 def main():
     root = Tk()
