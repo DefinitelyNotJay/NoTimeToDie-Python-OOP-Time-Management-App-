@@ -1,6 +1,7 @@
 import tkinter as tk
 import datetime
 import winsound as ws
+from tkinter import ttk
 
 # Creating class
 class Countdown(tk.Frame):
@@ -28,15 +29,15 @@ class Countdown(tk.Frame):
     def create_widgets(self):
         """ create & design all widgets """
         self.label = tk.Label(self, text = "Enter the time in seconds.")
-        self.entry_hr = tk.Entry(self, width = 3, justify="center")
-        self.entry_min = tk.Entry(self, width = 3, justify="center")
-        self.entry_sec = tk.Entry(self, width = 3, justify="center")
+        self.entry_hr = tk.ttk.Entry(self, width = 3, justify="center")
+        self.entry_min = tk.ttk.Entry(self, width = 3, justify="center")
+        self.entry_sec = tk.ttk.Entry(self, width = 3, justify="center")
         self.entry_sec.focus_set()
-        self.reset = tk.Button(self, text= "Reset Timer",
+        self.reset = tk.ttk.Button(self, text= "Reset Timer",
         command=self.reset_button)
-        self.stop = tk.Button(self, text= "Stop Timer",
+        self.stop = tk.ttk.Button(self, text= "Stop Timer",
         command=self.stop_button)
-        self.start = tk.Button(self, text= "Start Timer",
+        self.start = tk.ttk.Button(self, text= "Start Timer",
         command=self.start_button)
 
     def get_time(self):
