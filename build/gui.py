@@ -39,7 +39,7 @@ canvas.create_text(
     63.0,
     274.0,
     anchor="nw",
-    text="ไอเหี้ยเฟือง",
+    text="ไอเหี้ยเจ",
     fill="#000000",
     font=("Inter", 64 * -1)
 )
