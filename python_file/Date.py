@@ -30,7 +30,7 @@ class Countdown(tk.Tk):
 
     def create_widgets(self):
         """ create & design all widgets """
-        self.label = tk.Label(self, text = "Enter the time in seconds.", font=('Arial', 14))
+        self.label = tk.Label(self, text = "Enter the time in seconds.")
         self.entry_hr = tk.ttk.Entry(self, width = 3, justify="center")
         self.entry_min = tk.ttk.Entry(self, width = 3, justify="center")
         self.entry_sec = tk.ttk.Entry(self, width = 3, justify="center")
@@ -93,12 +93,6 @@ class Countdown(tk.Tk):
 
     def convert_seconds_left_to_time(self):
         return datetime.timedelta(seconds=self.seconds_left)
-    
-    def showing_cat(self):
-        cat_list = []
-        # divide 4
-
-
 
 if __name__ == "__main__":
     countdown = Countdown()
