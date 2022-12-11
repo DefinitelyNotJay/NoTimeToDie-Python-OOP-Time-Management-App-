@@ -6,6 +6,7 @@ class todo:
         self.root.title('TO DO LIST')
         self.root.geometry('650x410+300+150')
         self.root.configure(bg="#f3d9fa")
+        self.root.resizable(False, False)
         # "To Do List" Title
         self.label = Label(self.root, text='To Do List',
             font=("Acme", 30), width=10,bd=0.5,bg='#BE9FE1', fg='#F1F1F6')
@@ -20,9 +21,9 @@ class todo:
 
         def add():
             """ Add contents by append text from Add Text label """
-            content = self.text.get(1.0, END)
-            print(content)
-            self.main_text.insert(END, content)
+            content = self.text.get(1.0, END) #get text from label
+            self.main_text.insert(END, content) #append task in list
+            # add content in .txt file
             with open('data.txt', 'a') as file:
                 file.write(content)
                 file.seek(0)
@@ -34,11 +35,6 @@ class todo:
             look = self.main_text.get(delete_)
             with open('data.txt', 'r+') as f:
                 new_f = f.readlines()
-                print('-----------------------')
-                print(delete_)
-                print(look)
-                print(new_f)
-                print('-----------------------')
                 f.seek(0)
                 for line in new_f:
                     item = str(look)
