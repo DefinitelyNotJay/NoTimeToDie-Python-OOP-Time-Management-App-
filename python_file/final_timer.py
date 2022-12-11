@@ -29,7 +29,7 @@ class Countdown(tk.Tk):
         self.canvas.create_text(108.0, 140.0, anchor="nw", text="hr", fill="#FFFFFF", font=("Acme", 16 * -1))
         self.canvas.create_text(106.5, 240.0, anchor="nw", text="enter the time", fill="#FFFFFF", font=("Acme", 18 * -1))
         # ********
-        self.text_label = tk.Label(text="0:00:00", font=("TH-SarabunPSK", 22), bg="#8b84ad")
+        self.text_label = tk.Label(text="0:00:00", font=("Acme", 22), bg="#8b84ad")
 
         # ---------- hour ----------
 
