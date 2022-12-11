@@ -7,18 +7,18 @@ class todo:
         self.root.geometry('650x410+300+150')
         # "To Do List" Title
         self.label = Label(self.root, text='To Do List',
-            font=("MN Kunghaeng Bold", 28), width=10,bd=0.5,bg='#f3d9fa', fg='#862e9c')
+            font=("Acme", 30), width=10,bd=0.5,bg='#ECC5FB', fg='#FFFFD0')
         self.label.pack(side='top', fill=BOTH)
 
         # "Add text" label
         self.label2 = Label(self.root, text='Add text',
             font='ariel, 18 bold', width=10,bd=5,bg='#a9f5b4', fg='black')
-        self.label2.place(x=40, y=54)
+        self.label2.place(x=40, y=60)
 
         # "Text" label
         self.label3 = Label(self.root, text='Text',
             font='ariel, 18 bold', width=10,bd=5,bg='#a9f5b4', fg='black')
-        self.label3.place(x=380, y=54)
+        self.label3.place(x=380, y=60)
 
         # All tasks
         self.main_text = Listbox(self.root, height=5, bd=5, width=50, font=("MN Kunghaeng", 25, "bold"), justify="center")
