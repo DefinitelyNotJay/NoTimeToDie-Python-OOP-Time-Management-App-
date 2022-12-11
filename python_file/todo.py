@@ -12,7 +12,7 @@ class todo:
         self.label.pack(side='top', fill=BOTH)
         # All tasks
         self.main_text = Listbox(self.root, height=4, bd=0.5, width=31, font=("Friendly", 25, "bold"), justify="center")
-        self.main_text.place(x=14, y=185)
+        self.main_text.place(x=14, y=180)
 
         # Adding task label
         self.text = Text(self.root, bd=0.5, height=1, width=30, font=("Friendly", 25, "bold"))
@@ -54,15 +54,13 @@ class todo:
                 self.main_text.insert(-1, ready)
                 file.close()
         #ปุ่มadd
-        self.button = Button(self.root, text="Add", font=("Acme", 20),
+        self.button = Button(self.root, text="Add", font=("Acme", 19),
                     width=8,bd=0.5, bg='#8ce99a',fg='#FBFACD', command=add)
         self.button.place(x=90, y=122)
         #ปุ่มลบ
-        self.button2 = Button(self.root, text='Delete', font=("Acme", 20),
+        self.button2 = Button(self.root, text='Delete', font=("Acme", 19),
                     width=8,bd=0.5, bg='#ffa8a8', fg='#FBFACD', command=delete)
         self.button2.place(x=420, y=122)
-
-
 def main():
     root = Tk()
     ui = todo(root)
