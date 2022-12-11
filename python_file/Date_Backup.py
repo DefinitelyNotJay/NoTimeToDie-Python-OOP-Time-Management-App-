@@ -30,7 +30,7 @@ class Countdown(tk.Tk):
 
     def create_widgets(self):
         """ create & design all widgets """
-        self.label = tk.Label(self, text = "Enter the time in seconds.", font=('Arial', 14))
+        self.label = tk.Label(self, text = "Enter the time in seconds.", font=('Arial', 10))
         self.entry_hr = tk.ttk.Entry(self, width = 3, justify="center")
         self.entry_min = tk.ttk.Entry(self, width = 3, justify="center")
         self.entry_sec = tk.ttk.Entry(self, width = 3, justify="center")
