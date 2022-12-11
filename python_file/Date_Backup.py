@@ -30,7 +30,7 @@ class Countdown(tk.Tk):
 
     def create_widgets(self):
         """ create & design all widgets """
-        self.label = tk.Label(self, text = "Enter the time in seconds.")
+        self.label = tk.Label(self, text = "Enter the time in seconds.", font=('Arial', 14))
         self.entry_hr = tk.ttk.Entry(self, width = 3, justify="center")
         self.entry_min = tk.ttk.Entry(self, width = 3, justify="center")
         self.entry_sec = tk.ttk.Entry(self, width = 3, justify="center")
@@ -67,6 +67,7 @@ class Countdown(tk.Tk):
             # ws.PlaySound("", ws.SND_FILENAME)
 
     def reset_button(self):
+        """ Reset to 00:00:00 """
         self.seconds_left = 0
         self.stop_timer()
         self._timer_on = False
@@ -75,11 +76,12 @@ class Countdown(tk.Tk):
         self.after_button()
 
     def stop_button(self):
+        """ Stop time """
         self.seconds_left = self.get_time()
         self.stop_timer()
     
     def start_button(self):
-        # get time from label
+        # get time from label and start counting down the time
         self.seconds_left = self.get_time()
         self.stop_timer()
         self.countdown()
@@ -87,12 +89,17 @@ class Countdown(tk.Tk):
         self.label.place(x=120, y=60)
 
     def stop_timer(self):
+        """ Stop time function() """
         if self._timer_on:
             self.after_cancel(self._timer_on)
             self._timer_on = False
 
     def convert_seconds_left_to_time(self):
         return datetime.timedelta(seconds=self.seconds_left)
+    
+    def showing_cat(self):
+        cat_list = []
+        # divide 4
 
 if __name__ == "__main__":
     countdown = Countdown()
