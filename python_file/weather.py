@@ -10,7 +10,7 @@ root.title("Weather App")
 root.geometry("650x410")
 root.resizable(False, False)
 
-image = Image.open('Weather App.png')
+image = Image.open('images/weather_img/Weather App.png')
 photo = ImageTk.PhotoImage(image)
 label = Label(root, image=photo, bg="#4a536b")
 label.grid(row=1)
@@ -64,8 +64,8 @@ def name_of_city():
     windspeed_val.configure(text=windspeed)
 
 
-img_button = PhotoImage(file='Button.png')
-img_button2 = PhotoImage(file='Button2.png')
+img_button = PhotoImage(file='images/weather_img/Button.png')
+img_button2 = PhotoImage(file='images/weather_img/Button2.png')
 city_nameButton = Button(root, image=img_button, command=name_of_city, bg="#A00B88", relief=SUNKEN, cursor='hand2', border=0, borderwidth = 0, activebackground='#A00B88')
 city_nameButton.place(x=465, y=14)
 
