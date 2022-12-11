@@ -5,17 +5,18 @@ class todo:
         self.root = root
         self.root.title('TO DO LIST')
         self.root.geometry('650x410+300+150')
+        self.root.configure(bg="#f3d9fa")
         # "To Do List" Title
         self.label = Label(self.root, text='To Do List',
-            font=("Acme", 30), width=10,bd=0.5,bg='#7F669D', fg='#FFFFD0')
+            font=("Acme", 30), width=10,bd=0.5,bg='#BE9FE1', fg='#F1F1F6')
         self.label.pack(side='top', fill=BOTH)
         # All tasks
-        self.main_text = Listbox(self.root, height=5, bd=0.5, width=32, font=("Friendly", 25, "bold"), justify="center")
-        self.main_text.place(x=40, y=180)
+        self.main_text = Listbox(self.root, height=4, bd=0.5, width=31, font=("Friendly", 25, "bold"), justify="center")
+        self.main_text.place(x=14, y=185)
 
         # Adding task label
         self.text = Text(self.root, bd=0.5, height=1, width=30, font=("Friendly", 25, "bold"))
-        self.text.place(x=30, y=60)
+        self.text.place(x=23, y=60)
 
         def add():
             """ Add contents by append text from Add Text label """
@@ -53,13 +54,13 @@ class todo:
                 self.main_text.insert(-1, ready)
                 file.close()
         #ปุ่มadd
-        self.button = Button(self.root, text="Add", font=("Carter One", 20),
+        self.button = Button(self.root, text="Add", font=("Acme", 20),
                     width=8,bd=0.5, bg='#68B984',fg='#FBFACD', command=add)
-        self.button.place(x=70, y=120)
+        self.button.place(x=90, y=122)
         #ปุ่มลบ
-        self.button2 = Button(self.root, text='Delete', font=("Carter One", 20),
+        self.button2 = Button(self.root, text='Delete', font=("Acme", 20),
                     width=8,bd=0.5, bg='#F7A4A4', fg='#FBFACD', command=delete)
-        self.button2.place(x=400, y=120)
+        self.button2.place(x=420, y=122)
 
 
 def main():
