@@ -55,11 +55,11 @@ class todo:
                 file.close()
         #ปุ่มadd
         self.button = Button(self.root, text="Add", font=("Acme", 20),
-                    width=8,bd=0.5, bg='#68B984',fg='#FBFACD', command=add)
+                    width=8,bd=0.5, bg='#8ce99a',fg='#FBFACD', command=add)
         self.button.place(x=90, y=122)
         #ปุ่มลบ
         self.button2 = Button(self.root, text='Delete', font=("Acme", 20),
-                    width=8,bd=0.5, bg='#F7A4A4', fg='#FBFACD', command=delete)
+                    width=8,bd=0.5, bg='#ffa8a8', fg='#FBFACD', command=delete)
         self.button2.place(x=420, y=122)
 
 
