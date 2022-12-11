@@ -3,12 +3,6 @@ import tkinter as tk
 import datetime
 import winsound as ws
 from tkinter import PhotoImage
-from pathlib import Path
-OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\ASUS\Desktop\Figma\build\assets\frame0")
-
-def relative_to_assets(path: str) -> Path:
-    return ASSETS_PATH / Path(path)
 
 # Creating class
 class Countdown(tk.Tk):
