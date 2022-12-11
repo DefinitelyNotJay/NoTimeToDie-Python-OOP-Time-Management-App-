@@ -28,7 +28,7 @@ class Countdown(tk.Tk):
     def create_widgets(self):
         """ create & design all widgets """
         self.canvas = tk.Canvas(self, bg = "#191845", height = 500, width = 300, bd = 0, highlightthickness = 0, relief = "ridge")
-        self.image_image_1 = PhotoImage(file=relative_to_assets("image_1.png"))
+        self.image_image_1 = PhotoImage(file=("images/timer_img/image_1.png"))
         image_1 = self.canvas.create_image(162.0, 255.0, image=self.image_image_1)
         self.canvas.create_text(183.0, 141.0, anchor="nw", text="sec", fill="#FFFFFF", font=("TH-SarabunPSK", 16 * -1))
         self.canvas.create_text(141.0, 141.0, anchor="nw", text="min", fill="#FFFFFF", font=("TH-SarabunPSK", 16 * -1))
@@ -39,20 +39,17 @@ class Countdown(tk.Tk):
 
         # ---------- hour ----------
 
-        self.entry_hour_image = PhotoImage(file=relative_to_assets("entry_1.png"))
-        entry_bg_1 = self.canvas.create_image(97, 226.5, image=self.entry_hour_image)
+        self.entry_hour_image = PhotoImage(file=("images/timer_img/entry_1.png"))
         self.entry_hr = tk.Entry(bd=0, bg="#747395", fg="#fff", highlightthickness=0, justify = "ce")
 
         # ---------- min ----------
 
-        self.entry_min_image = PhotoImage(file=relative_to_assets("entry_2.png"))
-        entry_bg_2 = self.canvas.create_image(152.0, 226.5, image=self.entry_min_image)
+        self.entry_min_image = PhotoImage(file=("images/timer_img/entry_2.png"))
         self.entry_min = tk.Entry(bd=0, bg="#797ba0", fg="#fff", highlightthickness=0, justify = "ce")
 
         # ---------- sec ----------
 
-        self.entry_sec_image = PhotoImage(file=relative_to_assets("entry_3.png"))
-        entry_bg_3 = self.canvas.create_image(207.0, 226.5, image=self.entry_sec_image)
+        self.entry_sec_image = PhotoImage(file=("images/timer_img/entry_3.png"))
         self.entry_sec = tk.Entry(bd=0, bg="#666da3", fg="#fff", highlightthickness=0, justify = "ce")
         self.entry_sec.focus_set()
         self.reset = tk.Button(self, text= "Reset Timer",
