@@ -26,8 +26,8 @@ class Homepage(tk.Tk):
         self.timer_btn = tk.Button(self, text="Timer", command=timer)
         self.weather_btn = tk.Button(self, text="Weather", command=weather_widget)
     def show_widgets(self):
-        self.todo_btn.pack()
-        self.timer_btn.pack()
-        self.weather_btn.pack()
+        self.todo_btn.place(x=180, y=400)
+        self.timer_btn.place(x=180, y=350)
+        self.weather_btn.place(x=175, y=300)
 homepage = Homepage()
 homepage.mainloop()
