@@ -11,7 +11,7 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\Windows 11\Desktop\build\assets\frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r"D:\PSCP\PSCP-Project\build\assets\frame0")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -38,8 +38,8 @@ canvas.place(x = 0, y = 0)
 image_image_1 = PhotoImage(
     file=relative_to_assets("image_1.png"))
 image_1 = canvas.create_image(
-    481.9998779296875,
-    528.0,
+    142,
+    250,
     image=image_image_1
 )
 
