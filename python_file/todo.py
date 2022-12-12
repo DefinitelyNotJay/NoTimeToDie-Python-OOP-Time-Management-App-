@@ -20,17 +20,20 @@ class todo:
         
         def add():
             """ Add contents by append text from Add Text label """
-            content = self.text.get(1.0, tk.END) #get text from label
+            content = self.text.get(1.0, tk.END) #get text from user
             self.main_text.insert(tk.END, content) #append task in list
             # add content in .txt file
             with open('data.txt', 'a') as file:
+                # write in file
                 file.write(content)
+                # used to change the position of the File Handle to a given specific position
                 file.seek(0)
+                # closes the opened file
                 file.close()
             self.text.delete(1.0, tk.END)
 
         def delete():
-            delete_ = self.main_text.curselection()
+            delete_ = self.main_text.curselection() # display the selected item
             look = self.main_text.get(delete_)
             with open('data.txt', 'r+') as f:
                 new_f = f.readlines()
@@ -39,26 +42,27 @@ class todo:
                     item = str(look)
                     if item not in line:
                         f.write(line)
+                # resizes the file to the given number of bytes.
                 f.truncate()
             self.main_text.delete(delete_)
         with open('data.txt', 'r') as file:
-            # readlines -> Taking all text that is separated by line and containing them in a list
+            # readlines -> returns one line from the file ans then get in list.
             read = file.readlines()
             for i in read:
                 ready = i.split()
                 self.main_text.insert(-1, ready)
                 file.close()
-        #ปุ่มadd
+        # Buttonadd
         self.button = tk.Button(self.root, text="Add", font=("Acme", 19),
                     width=8,bd=0.5, bg='#40c057',fg='#FBFACD', command=add)
+        # position
         self.button.place(x=90, y=122)
-        #ปุ่มลบ
+        # Buttondelete
         self.button2 = tk.Button(self.root, text='Delete', font=("Acme", 19),
                     width=8,bd=0.5, bg='#e64980', fg='#FBFACD', command=delete)
+        # position
         self.button2.place(x=420, y=122)
 def main():
     root = tk.Tk()
     ui = todo(root)
     root.mainloop()
-# if __name__ == "__main__":#เรียกหาหน้าต่าง
-#     main()
