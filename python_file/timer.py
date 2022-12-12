@@ -2,7 +2,6 @@ import tkinter as tk
 import datetime
 import winsound as ws
 from tkinter import PhotoImage, messagebox
-from playsound import playsound
 
 def timer():
     # Creating class
