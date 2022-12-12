@@ -16,7 +16,7 @@ class Homepage(tk.Tk):
         self.title("No Time To Die")
         self.geometry("400x600+450+25")
         self.resizable(False, False)
-        self.config(background="yellow")
+        self.config(background="#f3d9fa")
         # widgets
         self.all_widgets()
         self.show_widgets()

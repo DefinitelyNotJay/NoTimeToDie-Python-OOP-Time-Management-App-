@@ -1,7 +1,8 @@
 import tkinter as tk
 import datetime
 import winsound as ws
-from tkinter import PhotoImage
+from tkinter import PhotoImage, messagebox
+from playsound import playsound
 
 def timer():
     # Creating class
@@ -11,6 +12,8 @@ def timer():
             super().__init__() #escape defining infinite times
             self.title('Timer')
             self.geometry("300x500+500+70")
+            self.icon = PhotoImage(file="images/timer_img/alarm-clock.png")
+            self.iconphoto(False, self.icon)
             self.resizable(False, False)
             self.create_widgets()
             self.show_widgets()
@@ -83,9 +86,9 @@ def timer():
                 self.seconds_left -= 1
                 self._timer_on = self.after(1000, self.countdown)
             else:
+                # When timeout
                 self._timer_on = False
-                # ws.PlaySound("", ws.SND_FILENAME)
-
+                messagebox.showwarning(title="Time Out", message="Time OUT!!!!!!!!!")
         def reset_button(self):
             self.seconds_left = 0
             self.stop_timer()
