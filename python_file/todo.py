@@ -55,27 +55,17 @@ class todo(tk.Toplevel):
                 ready = i.split()
                 self.main_text.insert(-1, ready)
                 file.close()
-<<<<<<< HEAD
-        # Buttonadd
-        self.button = tk.Button(self, text="Add", font=("Acme", 19),
-                    width=8,bd=0.5, bg='#40c057',fg='#FBFACD', command=add)
-        # position
-        self.button.place(x=90, y=122)
-        # Buttondelete
-        self.button2 = tk.Button(self, text='Delete', font=("Acme", 19),
-=======
+
         # add Button
-        self.button = tk.Button(self.root, text="Add", font=("Acme", 19),
+        self.button = tk.Button(self, text="Add", font=("Acme", 19),
                     width=8,bd=0.5, bg='#40c057',fg='#FBFACD', command=add) #command use to call function
         # position
         self.button.place(x=90, y=122)
         # delete Button
-        self.button2 = tk.Button(self.root, text='Delete', font=("Acme", 19),
->>>>>>> 1c94ffa02300ab50bb898d145364cb3be15d9605
+        self.button2 = tk.Button(self, text='Delete', font=("Acme", 19),
                     width=8,bd=0.5, bg='#e64980', fg='#FBFACD', command=delete)
         # position
         self.button2.place(x=420, y=122)
 def main():
     root = todo()
     root.mainloop()
-
