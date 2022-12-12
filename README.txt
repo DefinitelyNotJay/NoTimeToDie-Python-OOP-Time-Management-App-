@@ -14,3 +14,11 @@
               (  _人⊹人⊹人_ )
 ‌                   ￣凵
 
+1.สีตัวอักษรใน timer
+2.ตกแต่ง weather
+3.สีตัว todo อ่อนไป
+
+- ใส่เพลงและ MessageBox เตือนใน Timer
+- icon 3 Apps
+- stop timer fixed
+
