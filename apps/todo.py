@@ -56,16 +56,17 @@ class todo(tk.Toplevel):
                 self.main_text.insert(-1, ready)
                 file.close()
 
-        # add Button
+        # Add button
         self.button = tk.Button(self, text="Add", font=("Acme", 19),
                     width=8,bd=0.5, bg='#40c057',fg='#FBFACD', command=add) #command use to call function
-        # position
+        # Add button position
         self.button.place(x=90, y=122)
-        # delete Button
+        # Delete button
         self.button2 = tk.Button(self, text='Delete', font=("Acme", 19),
                     width=8,bd=0.5, bg='#e64980', fg='#FBFACD', command=delete)
-        # position
+        # Delete button position
         self.button2.place(x=420, y=122)
+
 def main():
     root = todo()
     root.mainloop()
