@@ -9,7 +9,7 @@ def weather_widget():
     #Weather
     root = tk.Toplevel()
     root.title("Weather App")
-    root.geometry("650x410")
+    root.geometry("650x410+320+100")
     root.resizable(False, False)
     icon = PhotoImage(file="images/icon/temperature-high.png")
     root.iconphoto(False, icon)
