@@ -1,4 +1,3 @@
-
 import tkinter as tk
 import datetime
 import winsound as ws
@@ -8,7 +7,7 @@ from tkinter import PhotoImage
 class Countdown(tk.Tk):
     def __init__(self):
         """ Declare all functions and variables """
-        super().__init__()
+        super().__init__() #escape defining infinite times
         self.title('Timer')
         self.geometry("300x500+800+200")
         self.resizable(False, False)
@@ -16,8 +15,6 @@ class Countdown(tk.Tk):
         self.show_widgets()
         self.seconds_left = 0
         self._timer_on = False
-        self.FONT1 = ('Tahoma', 22)
-        self.FONT2 = ('Tahoma', 18)
 
     def create_widgets(self):
         """ create & design all widgets """
