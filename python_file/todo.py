@@ -1,21 +1,23 @@
 import tkinter as tk
 from tkinter import PhotoImage
-class todo:
-    def __init__(self, root):
-        self.root = root
-        self.root.title('TO DO LIST')
-        self.root.geometry('650x410+300+150')
-        self.root.configure(bg="#d0bfff")
-        self.root.resizable(False, False)
+class todo(tk.Toplevel):
+    def __init__(self):
+        super().__init__()
+        self.title('TO DO LIST')
+        self.geometry('650x410+300+150')
+        self.configure(bg="#d0bfff")
+        self.resizable(False, False)
+        self.icon = PhotoImage(file="images/icon/list.png")
+        self.iconphoto(False, self.icon)
         # "To Do List" Title
-        self.label = tk.Label(self.root, text='To Do List',
+        self.label = tk.Label(self, text='To Do List',
             font=("Acme", 30), width=10,bd=0.5,bg='#5c67a6', fg='#FCFDF2')
         self.label.pack(side='top', fill=tk.BOTH)
         # All tasks
-        self.main_text = tk.Listbox(self.root, height=4, bd=0.5, width=31, font=("Friendly", 25, "bold"), justify="center")
+        self.main_text = tk.Listbox(self, height=4, bd=0.5, width=31, font=("Friendly", 25, "bold"), justify="center")
         self.main_text.place(x=14, y=180)
         # Adding task label
-        self.text = tk.Text(self.root, bd=0.5, height=1, width=30, font=("Friendly", 25, "bold"))
+        self.text = tk.Text(self, bd=0.5, height=1, width=30, font=("Friendly", 25, "bold"))
         self.text.place(x=23, y=60)
         
         def add():
@@ -53,16 +55,16 @@ class todo:
                 self.main_text.insert(-1, ready)
                 file.close()
         # Buttonadd
-        self.button = tk.Button(self.root, text="Add", font=("Acme", 19),
+        self.button = tk.Button(self, text="Add", font=("Acme", 19),
                     width=8,bd=0.5, bg='#40c057',fg='#FBFACD', command=add)
         # position
         self.button.place(x=90, y=122)
         # Buttondelete
-        self.button2 = tk.Button(self.root, text='Delete', font=("Acme", 19),
+        self.button2 = tk.Button(self, text='Delete', font=("Acme", 19),
                     width=8,bd=0.5, bg='#e64980', fg='#FBFACD', command=delete)
         # position
         self.button2.place(x=420, y=122)
 def main():
-    root = tk.Tk()
-    ui = todo(root)
+    root = todo()
     root.mainloop()
+

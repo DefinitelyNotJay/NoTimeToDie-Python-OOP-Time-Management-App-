@@ -11,7 +11,8 @@ def weather_widget():
     root.title("Weather App")
     root.geometry("650x410")
     root.resizable(False, False)
-    
+    icon = PhotoImage(file="images/icon/temperature-high.png")
+    root.iconphoto(False, icon)
     image = PhotoImage(file='images/weather_img/Weather App.png')
     # photo1 = ImageTk.PhotoImage(image)
     label = tk.Label(root, image=image, bg="#4a536b")

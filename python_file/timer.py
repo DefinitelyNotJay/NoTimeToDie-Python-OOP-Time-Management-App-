@@ -2,7 +2,6 @@ import tkinter as tk
 import datetime
 import winsound as ws
 from tkinter import PhotoImage, messagebox
-
 def timer():
     # Creating class
     class Countdown(tk.Toplevel):
@@ -11,7 +10,7 @@ def timer():
             super().__init__() #escape defining infinite times
             self.title('Timer')
             self.geometry("300x500+500+70")
-            self.icon = PhotoImage(file="images/timer_img/alarm-clock.png")
+            self.icon = PhotoImage(file="images/icon/alarm-clock.png")
             self.iconphoto(False, self.icon)
             self.resizable(False, False)
             self.create_widgets()
