@@ -15,7 +15,7 @@ class Homepage(tk.Tk):
         """ All variables and GUI config """
         super().__init__()
         self.title("No Time To Die")
-        self.geometry("400x600")
+        self.geometry("400x600+450+25")
         self.resizable(False, False)
         # widgets
         self.all_widgets()

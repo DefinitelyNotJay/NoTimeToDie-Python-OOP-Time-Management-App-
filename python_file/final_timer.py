@@ -27,7 +27,7 @@ def timer():
             self.canvas.create_text(107.0, 151.0, anchor="nw", text="hr", fill="#FFFFFF", font=("Acme", 16 * -1))
             self.canvas.create_text(106.5, 245.0, anchor="nw", text="enter the time", fill="#FFFFFF", font=("Acme", 18 * -1))
             # ********
-            self.text_label = tk.Label(self, text="0:00:00", font=("Roboto Mono", 22), bg="#8b84ad")
+            self.text_label = tk.Label(self, text="0:00:00", font=("Roboto Mono", 22), bg="#645CAA", fg="#FFFFFF")
 
             # ---------- hour ----------
 

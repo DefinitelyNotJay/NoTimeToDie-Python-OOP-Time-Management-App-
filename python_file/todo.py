@@ -5,11 +5,11 @@ class todo:
         self.root = root
         self.root.title('TO DO LIST')
         self.root.geometry('650x410+300+150')
-        self.root.configure(bg="#f3d9fa")
+        self.root.configure(bg="#d0bfff")
         self.root.resizable(False, False)
         # "To Do List" Title
         self.label = tk.Label(self.root, text='To Do List',
-            font=("Acme", 30), width=10,bd=0.5,bg='#BE9FE1', fg='#F1F1F6')
+            font=("Acme", 30), width=10,bd=0.5,bg='#5c67a6', fg='#FCFDF2')
         self.label.pack(side='top', fill=tk.BOTH)
         # All tasks
         self.main_text = tk.Listbox(self.root, height=4, bd=0.5, width=31, font=("Friendly", 25, "bold"), justify="center")
@@ -51,11 +51,11 @@ class todo:
                 file.close()
         #ปุ่มadd
         self.button = tk.Button(self.root, text="Add", font=("Acme", 19),
-                    width=8,bd=0.5, bg='#8ce99a',fg='#FBFACD', command=add)
+                    width=8,bd=0.5, bg='#40c057',fg='#FBFACD', command=add)
         self.button.place(x=90, y=122)
         #ปุ่มลบ
         self.button2 = tk.Button(self.root, text='Delete', font=("Acme", 19),
-                    width=8,bd=0.5, bg='#ffa8a8', fg='#FBFACD', command=delete)
+                    width=8,bd=0.5, bg='#e64980', fg='#FBFACD', command=delete)
         self.button2.place(x=420, y=122)
 def main():
     root = tk.Tk()
