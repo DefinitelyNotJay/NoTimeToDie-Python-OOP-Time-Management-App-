@@ -24,16 +24,10 @@ class Homepage(tk.Tk):
     def all_widgets(self):
         self.todo_btn = tk.Button(self, text="To Do", command=main)
         self.timer_btn = tk.Button(self, text="Timer", command=timer)
-        # self.weather_btn = tk.Button(self, text="Weather", command=weather_widget)
-        # self.cat_img = PhotoImage(file="images/home_img/no_time_to_die_no_bg.png")
-        self.canvas = tk.Canvas(self, bg="black", width=100, height=200)
-        self.canvas.pack()
-
+        self.weather_btn = tk.Button(self, text="Weather", command=weather_widget)
     def show_widgets(self):
         self.todo_btn.pack()
         self.timer_btn.pack()
         self.weather_btn.pack()
-        self.cat_img_place = tk.Label(self, image=self.cat_img).pack()
-        
 homepage = Homepage()
 homepage.mainloop()
