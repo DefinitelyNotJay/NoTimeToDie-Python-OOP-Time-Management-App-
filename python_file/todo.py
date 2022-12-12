@@ -26,13 +26,14 @@ class todo:
             with open('data.txt', 'a') as file:
                 # write in file
                 file.write(content)
-                # used to change the position of the File Handle to a given specific position
+                # change the position of the File Handle to a given specific position
                 file.seek(0)
                 # closes the opened file
                 file.close()
             self.text.delete(1.0, tk.END)
-
+        
         def delete():
+            """ delete selection text """
             delete_ = self.main_text.curselection() # display the selected item
             look = self.main_text.get(delete_)
             with open('data.txt', 'r+') as f:
@@ -42,22 +43,22 @@ class todo:
                     item = str(look)
                     if item not in line:
                         f.write(line)
-                # resizes the file to the given number of bytes.
+                # resizes the file.
                 f.truncate()
             self.main_text.delete(delete_)
-        with open('data.txt', 'r') as file:
-            # readlines -> returns one line from the file ans then get in list.
+        with open('data.txt', 'r') as file: # open file data
+            # readlines -> returns one line from the file ans then get in value.
             read = file.readlines()
             for i in read:
                 ready = i.split()
                 self.main_text.insert(-1, ready)
                 file.close()
-        # Buttonadd
+        # add Button
         self.button = tk.Button(self.root, text="Add", font=("Acme", 19),
-                    width=8,bd=0.5, bg='#40c057',fg='#FBFACD', command=add)
+                    width=8,bd=0.5, bg='#40c057',fg='#FBFACD', command=add) #command use to call function
         # position
         self.button.place(x=90, y=122)
-        # Buttondelete
+        # delete Button
         self.button2 = tk.Button(self.root, text='Delete', font=("Acme", 19),
                     width=8,bd=0.5, bg='#e64980', fg='#FBFACD', command=delete)
         # position
