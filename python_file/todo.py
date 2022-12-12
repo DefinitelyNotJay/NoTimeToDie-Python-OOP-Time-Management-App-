@@ -14,7 +14,6 @@ class todo:
         # All tasks
         self.main_text = tk.Listbox(self.root, height=4, bd=0.5, width=31, font=("Friendly", 25, "bold"), justify="center")
         self.main_text.place(x=14, y=180)
-
         # Adding task label
         self.text = tk.Text(self.root, bd=0.5, height=1, width=30, font=("Friendly", 25, "bold"))
         self.text.place(x=23, y=60)
