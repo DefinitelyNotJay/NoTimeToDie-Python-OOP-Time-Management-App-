@@ -23,10 +23,10 @@ def timer():
             self.canvas = tk.Canvas(self, bg = "#191845", height = 500, width = 300, bd = 0, highlightthickness = 0, relief = "ridge")
             self.image_image_1 = PhotoImage(file=("images/timer_img/image_1.png"))
             _ = self.canvas.create_image(162.0, 255.0, image=self.image_image_1)
-            self.canvas.create_text(182.0, 151.0, anchor="nw", text="sec", fill="#FFFFFF", font=("Acme", 16 * -1))
-            self.canvas.create_text(140.0, 151.0, anchor="nw", text="min", fill="#FFFFFF", font=("Acme", 16 * -1))
-            self.canvas.create_text(107.0, 151.0, anchor="nw", text="hr", fill="#FFFFFF", font=("Acme", 16 * -1))
-            self.canvas.create_text(106.5, 245.0, anchor="nw", text="enter the time", fill="#FFFFFF", font=("Acme", 18 * -1))
+            self.canvas.create_text(182.0, 151.0, anchor="nw", text="sec", fill="#FFFFFF", font=("Roboto Mono", 15 * -1))
+            self.canvas.create_text(140.0, 151.0, anchor="nw", text="min", fill="#FFFFFF", font=("Roboto Mono", 15 * -1))
+            self.canvas.create_text(107.0, 151.0, anchor="nw", text="hr", fill="#FFFFFF", font=("Roboto Mono", 15 * -1))
+            self.canvas.create_text(94.5, 245.0, anchor="nw", text="enter the time", fill="#FFFFFF", font=("Roboto Mono", 14 * -1))
             self.text_label = tk.Label(self, text="0:00:00", font=("Roboto Mono", 22), bg="#645CAA", fg="#FFFFFF")
 
             # ---------- hour entry ----------
@@ -44,13 +44,14 @@ def timer():
             self.entry_sec_image = PhotoImage(file=("images/timer_img/entry_3.png"))
             self.entry_sec = tk.Entry(self, bd=0, bg="#666da3", fg="#fff", highlightthickness=0, justify = "ce")
             self.entry_sec.focus_set() #focus second entry when open window
+
             # ---------- button ----------
-            self.reset = tk.Button(self, text= "Reset Timer", font=('Concert One', 12), bg='#7048e8',fg='#f3f0ff',
-            command=self.reset_button)
-            self.stop = tk.Button(self, text= "Stop Timer", font=('Concert One', 12), bg='#845ef7',fg='#f3f0ff',
-            command=self.stop_button)
-            self.start = tk.Button(self, text= "Start Timer", font=('Concert One', 12), bg='#b197fc',fg='#f3f0ff',
-            command=self.start_button)
+            self.image_image_2 = tk.PhotoImage(file="images/timer_img/button_reset.png")
+            self.image_image_3 = tk.PhotoImage(file="images/timer_img/button_stop.png")
+            self.image_image_4 = tk.PhotoImage(file="images/timer_img/button_start.png")
+            self.reset = tk.Button(self, bg="#2a327d", command=self.reset_button, image=self.image_image_2, relief=tk.SUNKEN, cursor='hand2', border=0, borderwidth = 0, activebackground='#2a327d')
+            self.stop = tk.Button(self, bg="#2a327d", command=self.stop_button, image=self.image_image_3, relief=tk.SUNKEN, cursor='hand2', border=0, borderwidth = 0, activebackground='#2a327d')
+            self.start = tk.Button(self, bg="#2a327d", command=self.start_button, image=self.image_image_4, relief=tk.SUNKEN, cursor='hand2', border=0, borderwidth = 0, activebackground='#2a327d')
 
         def show_widgets(self):
             """ pack all widgets """
@@ -59,9 +60,9 @@ def timer():
             self.entry_min.place(x=137.5, y=220, width=35.0, height=15.0)
             self.entry_sec.place(x=192.5, y=220.0, width=35.0, height=15.0)
             self.entry_hr.place(x=82.5, y=220.0, width=35.0, height=15.0)
-            self.start.place(x=110, y=280)
-            self.stop.place(x=113, y=330)
-            self.reset.place(x=109, y=380)
+            self.start.place(x=103, y=277)
+            self.stop.place(x=103, y=331)
+            self.reset.place(x=103, y=385)
 
         def get_time(self):
             """ Get time values from all 3 entries """
@@ -75,9 +76,9 @@ def timer():
             self.start.forget()
             self.stop.forget()
             self.reset.forget()
-            self.start.place(x=110, y=280)
-            self.stop.place(x=113, y=330)
-            self.reset.place(x=109, y=380)
+            self.start.place(x=103, y=277)
+            self.stop.place(x=103, y=331)
+            self.reset.place(x=103, y=385)
 
         def countdown(self):
             """ time countdown function """
